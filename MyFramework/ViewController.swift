@@ -13,8 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myKit = Authentication()
-        myKit.requestToken(clientSecret: "", clientId: "") { (token) in
+        let myframeKit = Authentication()
+        myframeKit.requestToken(clientSecret: "Insert your client secrete", clientId: "Insert your client id") { (token) in
             print(token ?? "")
         }
     }

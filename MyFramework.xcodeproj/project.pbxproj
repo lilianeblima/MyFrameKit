@@ -22,7 +22,6 @@
 		FB1D94441F13B91500C8C693 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1D94411F13B8CF00C8C693 /* Alamofire.framework */; };
 		FB1D94481F13B99300C8C693 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D94471F13B99300C8C693 /* Authentication.swift */; };
 		FB1D94511F13C0B500C8C693 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1D94411F13B8CF00C8C693 /* Alamofire.framework */; };
-		FB1D94531F13C0D500C8C693 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB1D94411F13B8CF00C8C693 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,16 +72,6 @@
 				FB1D94381F13B65800C8C693 /* MyFrameKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB1D94521F13C0CE00C8C693 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FB1D94531F13C0D500C8C693 /* Alamofire.framework in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -259,7 +248,7 @@
 				FB1D93E91F13B64B00C8C693 /* Frameworks */,
 				FB1D93EA1F13B64B00C8C693 /* Resources */,
 				FB1D943C1F13B65800C8C693 /* Embed Frameworks */,
-				FB1D94521F13C0CE00C8C693 /* CopyFiles */,
+				FB6620401F1545D00014C3CA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -447,6 +436,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FB6620401F1545D00014C3CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FB1D93E81F13B64B00C8C693 /* Sources */ = {
